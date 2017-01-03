@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE nta PUBLIC "-//Uppaal Team//DTD Flat System 1.1//EN" "http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd">
+<nta>
+  <declaration>// Place global declarations here.
+
+
+clock x;
+clock y;
+
+chan a;
+chan b;
+chan c;</declaration>
+    <template>
+    <name x="5" y="5">TA_Product</name>
+    
+    <declaration>
+// Place local declarations here.
+</declaration>
+    
+    <location id="Final1S1" x="0" y="0">
+      <name >Final1S1</name>
+      
+      
+      
+      
+    </location>
+
+    <location id="Final1S0" x="0" y="0">
+      <name >Final1S0</name>
+      
+      
+      
+      
+    </location>
+
+    <location id="Final1S3" x="0" y="0">
+      <name >Final1S3</name>
+      
+      
+      
+      
+    </location>
+
+    <location id="Final1Final1" x="0" y="0">
+      <name >Final1Final1</name>
+      
+      
+      
+      
+    </location>
+    
+    <init ref="Final1S0" />
+    
+    <transition>
+      <source ref="Final1Final1" />
+      <target ref="Final1Final1" />
+      
+      
+      <label kind="synchronisation">c?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S3" />
+      <target ref="Final1S3" />
+      
+      
+      <label kind="synchronisation">c?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S1" />
+      <target ref="Final1S3" />
+      
+      
+      <label kind="synchronisation">c?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S0" />
+      <target ref="Final1S1" />
+      
+      
+      <label kind="synchronisation">c?</label>
+      <label kind="assignment">x=0</label>
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S3" />
+      <target ref="Final1S3" />
+      
+      
+      <label kind="synchronisation">b?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1Final1" />
+      <target ref="Final1Final1" />
+      
+      
+      <label kind="synchronisation">b?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S1" />
+      <target ref="Final1S1" />
+      
+      
+      <label kind="synchronisation">b?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S0" />
+      <target ref="Final1S0" />
+      
+      
+      <label kind="synchronisation">b?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S0" />
+      <target ref="Final1S0" />
+      
+      
+      <label kind="synchronisation">a?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1Final1" />
+      <target ref="Final1Final1" />
+      
+      
+      <label kind="synchronisation">a?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S3" />
+      <target ref="Final1S3" />
+      
+      
+      <label kind="synchronisation">a?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S1" />
+      <target ref="Final1S3" />
+      
+      <label kind="guard">x&lt;=6</label>
+      <label kind="synchronisation">a?</label>
+      
+      
+    </transition>
+
+    <transition>
+      <source ref="Final1S1" />
+      <target ref="Final1Final1" />
+      
+      <label kind="guard">x&gt;6</label>
+      <label kind="synchronisation">a?</label>
+      
+      
+    </transition>
+  </template>
+
+  <system>// Place template instantiations here.
+Process1 = TA_Product();
+
+
+
+// List one or more processes to be composed into a system.
+system Process1;</system>
+</nta>
