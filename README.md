@@ -41,11 +41,9 @@ Below is a description of the source files.
 2. PredictiveRVMonitor.py
    The PredictiveRVMonitor.py module contains the method "predictiveRVmonitor" which is an implementation of the predictive RV monitoring algorithm discussed in the paper.  
    It takes the following as input parameters in the following order:
-   
 	- Input property psi: UPPAAL model as xml, containing automaton representing the input property psi.
     - Property to enforce varphi: UPPAAL model as xml, containing automaton representing the property to enforce varphi.
     - InputTrace: A sample input timed word belonging to the input property psi, where each event consists of an action and a delay. 
-
 This module also contains other methods (that are used by the "predictiveRVmonitor" method) for checking reachability of a set of locations, and to move in a TA from its current state by consuming a given event.   	
 
 3. testPredRVmonitor.py
