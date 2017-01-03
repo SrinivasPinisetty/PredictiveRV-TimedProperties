@@ -10,7 +10,7 @@ This software is provided under the license GPL.
 The source code and some properties formalized using UPPAAL which were used for testing are provided. 
 The archive contains three directories:
 - the  Source/ directory contains the source code. 
--The ExampleProperties/ directory contains some UPPAAL models (stored as .xml) defining some example properties we used for testing. 
+- The ExampleProperties/ directory contains some UPPAAL models (stored as .xml) defining some example properties we used for testing. 
 - The UppaalLibraries/ directory contains UPPAAL libraries that were used taken from  (http://people.cs.aau.dk/~adavid/python/).
 Note that the prototype was developed and tested on Linux only (Ububtu 14, 32-bit version). 
 
@@ -41,9 +41,10 @@ Below is a description of the source files.
 2. PredictiveRVMonitor.py
    The PredictiveRVMonitor.py module contains the method "predictiveRVmonitor" which is an implementation of the predictive RV monitoring algorithm discussed in the paper.  
    It takes the following as input parameters in the following order:
-	-Input property psi: UPPAAL model as xml, containing automaton representing the input property psi.
-    -Property to enforce varphi: UPPAAL model as xml, containing automaton representing the property to enforce varphi.
-    -InputTrace: A sample input timed word belonging to the input property psi, where each event consists of an action and a delay. 
+   
+	- Input property psi: UPPAAL model as xml, containing automaton representing the input property psi.
+    - Property to enforce varphi: UPPAAL model as xml, containing automaton representing the property to enforce varphi.
+    - InputTrace: A sample input timed word belonging to the input property psi, where each event consists of an action and a delay. 
 
 This module also contains other methods (that are used by the "predictiveRVmonitor" method) for checking reachability of a set of locations, and to move in a TA from its current state by consuming a given event.   	
 
@@ -68,9 +69,9 @@ Note that in the TA defining properties (in UPPAAL format), labels of accepting 
  Then the predictiveRVmonitor method can be invoked with some test input trace e.g. "('a',10).('a',34).('b',10).('a',12).('b',1)" as follows: 
  "PredictiveRVMonitor.predictiveRVmonitor("InputProperty1.xml", "PropertyEnforce1.xml", [('a',10),('a',34),('b',10),('a',12),('b',1)])".  
  
- 3. Please check "testPredRVmonitor.py" that contains some examples. 
-The following lines demonstrates how to execute these tests via python command line.
-1. Browse to the folder containing the source code (which contains the file "testPredRVmonitor.py").
-2. Execute the script "testPredRVmonitor.py" entering the following line in the command prompt "python testPredRVmonitor.py". 
+ 3. Please check "testPredRVmonitor.py" that contains some examples. The following lines demonstrates how to execute these tests via python command line:
+
+ - Browse to the folder containing the source code (which contains the file "testPredRVmonitor.py").
+ - Execute the script "testPredRVmonitor.py" entering the following line in the command prompt "python testPredRVmonitor.py". 
 
 
