@@ -67,7 +67,7 @@ Note that in the TA defining properties (in UPPAAL format), labels of accepting 
  Then the predictiveRVmonitor method can be invoked with some test input trace e.g. "('a',10).('a',34).('b',10).('a',12).('b',1)" as follows: 
  "PredictiveRVMonitor.predictiveRVmonitor("InputProperty1.xml", "PropertyEnforce1.xml", [('a',10),('a',34),('b',10),('a',12),('b',1)])".  
  
- 3. Please check "testPredRVmonitor.py" that contains some examples. The following lines demonstrates how to execute these tests via python command line:
+3. Please check "testPredRVmonitor.py" that contains some examples. The following lines demonstrates how to execute these tests via python command line:
 
  - Browse to the folder containing the source code (which contains the file "testPredRVmonitor.py").
  - Execute the script "testPredRVmonitor.py" entering the following line in the command prompt "python testPredRVmonitor.py". 
