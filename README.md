@@ -35,14 +35,14 @@ Below is a description of the source files.
 
 1. ProductTA.py
    This module contains functionality to compute product of two TAs. Note that in the algorithm, we need to compute the product of the automaton defining the input property (psi) and the 
-   automaton defining the property to enforce (varphi), and two sets of final locations F and F_neg. Method "Product" in this module takes both the TA's as input parameters, 
+   automaton defining the property to verify (varphi), and two sets of final locations F and F_neg. Method "Product" in this module takes both the TA's as input parameters, 
    and returns the product TA and the two sets of final locations F anf F_neg.      
    
 2. PredictiveRVMonitor.py
    The PredictiveRVMonitor.py module contains the method "predictiveRVmonitor" which is an implementation of the predictive RV monitoring algorithm discussed in the paper.  
    It takes the following as input parameters in the following order:
 	- Input property psi: UPPAAL model as xml, containing automaton representing the input property psi.
-    - Property to enforce varphi: UPPAAL model as xml, containing automaton representing the property to enforce varphi.
+    - Property to verify varphi: UPPAAL model as xml, containing automaton representing the property to verify varphi.
     - InputTrace: A sample input timed word belonging to the input property psi, where each event consists of an action and a delay. 
 This module also contains other methods (that are used by the "predictiveRVmonitor" method) for checking reachability of a set of locations, and to move in a TA from its current state by consuming a given event.   	
 
@@ -59,13 +59,13 @@ Note that in the TA defining properties (in UPPAAL format), labels of accepting 
 
 2. Invoke the "testStoreProcess" method in the MainTest module, providing the following arguments in order:
    - Input property 
-   - Property to enforce
+   - Property to verify
    - Input trace
    
- For example, let "InputProperty1.xml" be the UPPAAL model containing the TA defining the input property and let "PropertyEnforce1.xml" be the UPPAAL model containing the TA defining the property to enforce, 
+ For example, let "InputProperty1.xml" be the UPPAAL model containing the TA defining the input property and let "PropertyVerify1.xml" be the UPPAAL model containing the TA defining the property to verify, 
  and let the set of actions Sigma = {a,b,c}. 
  Then the predictiveRVmonitor method can be invoked with some test input trace e.g. "('a',10).('a',34).('b',10).('a',12).('b',1)" as follows: 
- "PredictiveRVMonitor.predictiveRVmonitor("InputProperty1.xml", "PropertyEnforce1.xml", [('a',10),('a',34),('b',10),('a',12),('b',1)])".  
+ "PredictiveRVMonitor.predictiveRVmonitor("InputProperty1.xml", "PropertyVerify1.xml", [('a',10),('a',34),('b',10),('a',12),('b',1)])".  
  
 3. Please check "testPredRVmonitor.py" that contains some examples. The following lines demonstrates how to execute these tests via python command line:
 

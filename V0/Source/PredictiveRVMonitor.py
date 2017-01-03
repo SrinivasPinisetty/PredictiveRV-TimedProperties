@@ -290,13 +290,13 @@ def getAccLoc(prop):
 ####### Predictive Runtime Verification Monitor.##############################################################################################
 ####### INPUT parameters #####
 ##########--Input property psi--UPPAAL model as xml, containing automaton representing the input property psi.#################################
-##########--Property to enforce-UPPAAL model as xml, containing automaton representing the property to enforce varphi. ########################
+##########--Property to verify-UPPAAL model as xml, containing automaton representing the property to verify varphi. ########################
 ##########--inputTrace--a sample input timed word belonging to the input property psi, where each event consists of an action and a delay. ####
 ########################################################################################################################## #################### 
 def predictiveRVmonitor(inputProp, prop, inputTrace):
     # PYUPPAAL
     psi = pyuppaal.NTA.from_xml(open(inputProp)).templates[0] # input property psi.
-    varphi = pyuppaal.NTA.from_xml(open(prop)).templates[0] # property to enforce varphi.
+    varphi = pyuppaal.NTA.from_xml(open(prop)).templates[0] # property to verify varphi.
     #CL_psi = psi.initlocation
     #CL_varphi = varphi.initlocation
     ## Accepting locations in  psi and in varphi ##
@@ -321,7 +321,7 @@ def predictiveRVmonitor(inputProp, prop, inputTrace):
         clksVarphi.append((str(clock),0))   
     ######################
     ## Compute product automaton B (product of psi and varphi), and the final location sets F and Fneg. ####
-    ### first parameter is the input property, and the second parameter should be the property to enforce.## 
+    ### first parameter is the input property, and the second parameter should be the property to verify.## 
     result= productTA.Product(psi, varphi) 
     ## product aut B.
     automatonB = result[0]
