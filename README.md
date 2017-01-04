@@ -1,6 +1,6 @@
 ========================================================================================================================
 Predictive Runtime Verification Monitor for Timed Properties.
-(Prototype implementation (in Python) of the predictive runtime verification algorithm for timed properties described in the paper.) 
+(Prototype implementation (in Python) of the predictive runtime verification algorithm for timed properties.) 
 ========================================================================================================================
 -= License =-
 This software is provided under the license GPL.
