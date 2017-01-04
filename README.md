@@ -12,7 +12,7 @@ The archive contains three directories:
 - the  Source/ directory contains the source code. 
 - The ExampleProperties/ directory contains some UPPAAL models (stored as .xml) defining some example properties we used for testing. 
 - The UppaalLibraries/ directory contains UPPAAL libraries that were used taken from  (http://people.cs.aau.dk/~adavid/python/).
-Note that the prototype was developed and tested on Linux only (Ububtu 14, 32-bit version). 
+Note that the prototype was developed and tested on Linux (Ububtu 14, 32-bit version). 
 
 -= REMARKS =-
 
@@ -44,7 +44,7 @@ Below is a description of the source files.
 	- Input property psi: UPPAAL model as xml, containing automaton representing the input property psi.
     - Property to verify varphi: UPPAAL model as xml, containing automaton representing the property to verify varphi.
     - InputTrace: A sample input timed word belonging to the input property psi, where each event consists of an action and a delay. 
-This module also contains other methods (that are used by the "predictiveRVmonitor" method) for checking reachability of a set of locations, and to move in a TA from its current state by consuming a given event.   	
+This module also contains other methods (that are used by the "predictiveRVmonitor" method) for checking reachability of a set of locations, and to move in a TA from its current state by consuming a given event etc.   	
 
 3. testPredRVmonitor.py
    Test script to test the behavior of the predictiveRVmonitor using example properties under directory "ExampleProperties/"  
@@ -57,7 +57,7 @@ Note that in the TA defining properties (in UPPAAL format), labels of accepting 
 
 1. Import the PredictiveRVMonitor module.
 
-2. Invoke the "testStoreProcess" method in the MainTest module, providing the following arguments in order:
+2. Invoke the "predictiveRVmonitor" method in the PredictiveRVMonitor module, providing the following arguments in order:
    - Input property 
    - Property to verify
    - Input trace
