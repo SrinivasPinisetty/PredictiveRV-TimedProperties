@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'><nta><declaration>// Place global declarations here.
+
+clock x;
+
+chan a;
+chan b;
+chan c;
+
+</declaration><template><name x="5" y="5">Property</name><declaration>// Place local declarations here.
+</declaration><location id="id0" x="72" y="-144"><name x="64" y="-152">Final2</name></location><location id="id1" x="-184" y="-144"><name x="-192" y="-152">Final1</name></location><location id="id2" x="72" y="48"><name x="64" y="40">l3</name></location><init ref="id1"/><transition><source ref="id2"/><target ref="id2"/><label kind="synchronisation" x="12" y="33">c?</label><nail x="0" y="40"/><nail x="8" y="56"/></transition><transition><source ref="id0"/><target ref="id0"/><label kind="synchronisation" x="144" y="-184">c?</label><nail x="120" y="-184"/><nail x="144" y="-152"/></transition><transition><source ref="id1"/><target ref="id1"/><label kind="synchronisation" x="-224" y="-96">c?</label><nail x="-232" y="-96"/><nail x="-192" y="-88"/></transition><transition><source ref="id2"/><target ref="id2"/><label kind="synchronisation" x="120" y="48">b?</label><nail x="120" y="40"/><nail x="112" y="64"/></transition><transition><source ref="id0"/><target ref="id0"/><label kind="guard" x="128" y="-112">x&gt;=5</label><label kind="synchronisation" x="104" y="-112">b?</label><label kind="assignment" x="128" y="-96">x=0</label><nail x="136" y="-120"/><nail x="104" y="-104"/></transition><transition><source ref="id2"/><target ref="id2"/><label kind="synchronisation" x="56" y="72">a?</label><nail x="48" y="80"/><nail x="88" y="80"/></transition><transition><source ref="id0"/><target ref="id0"/><label kind="synchronisation" x="56" y="-208">a?</label><nail x="40" y="-184"/><nail x="88" y="-184"/></transition><transition><source ref="id1"/><target ref="id1"/><label kind="synchronisation" x="-240" y="-192">a?</label><nail x="-232" y="-176"/><nail x="-160" y="-192"/></transition><transition><source ref="id0"/><target ref="id2"/><label kind="guard" x="72" y="-64">x&lt;5</label><label kind="synchronisation" x="80" y="-48">b?</label></transition><transition><source ref="id1"/><target ref="id0"/><label kind="synchronisation" x="-112" y="-168">b?</label><label kind="assignment" x="-72" y="-168">x=0</label></transition></template><system>// Place template instantiations here.
+Process1 = Property();
+
+// List one or more processes to be composed into a system.
+system Process1;</system></nta>

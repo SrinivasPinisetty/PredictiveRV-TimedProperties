@@ -1,0 +1,15 @@
+<nta>
+<declaration>// Place global declarations here.
+clock z;
+
+chan a;
+chan b;
+chan c;
+clock x;</declaration>
+<system>
+//Place template instantiations here.
+Process1 = TA_Product();
+// List one or more processes to be composed into a system.
+system Process1;
+</system>
+</nta>
