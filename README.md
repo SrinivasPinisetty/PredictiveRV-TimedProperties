@@ -7,9 +7,10 @@ This software is provided under the license GPL.
 
 -= Versions =-
 Current version is version 1 available under directory "V1". 
-Please check/use the current version.
-    - Version 0: Preliminary version where some computationally operations (such as checking reachability of a set of locations from the current state) are done online.
-    - Version 1: For all (symbolic states) reachable from the initial state, expensive operations such as reachability of set of locations F and F_neg are computed offline (before online monitoring begins).  	
+Please check/use the current version "V1".
+    
+- Version 0: Preliminary version where some computationally operations (such as checking reachability of a set of locations from the current state) are done online.
+- Version 1: For all (symbolic states) reachable from the initial state, expensive operations such as reachability of set of locations F and F_neg are computed offline (before online monitoring begins).  	
 
 -= About =-
 
