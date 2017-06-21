@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><!DOCTYPE nta PUBLIC '-//Uppaal Team//DTD Flat System 1.1//EN' 'http://www.it.uu.se/research/group/darts/uppaal/flat-1_1.dtd'><nta><declaration>// Place global declarations here.
+clock x;
+
+chan a;
+chan b;
+chan c;
+</declaration><template><name x="5" y="5">Property</name><location id="id0" x="-280" y="-256"><name x="-312" y="-264">Final1</name></location><init ref="id0"/><transition><source ref="id0"/><target ref="id0"/><label kind="synchronisation" x="-280" y="-216">c?</label><nail x="-264" y="-216"/><nail x="-288" y="-216"/></transition><transition><source ref="id0"/><target ref="id0"/><label kind="synchronisation" x="-224" y="-248">b?</label><nail x="-224" y="-256"/><nail x="-232" y="-232"/></transition><transition><source ref="id0"/><target ref="id0"/><label kind="synchronisation" x="-264" y="-312">a?</label><nail x="-280" y="-296"/><nail x="-232" y="-288"/></transition></template><system>// Place template instantiations here.
+
+Process= Property();
+// List one or more processes to be composed into a system.
+system Process;
+</system></nta>
