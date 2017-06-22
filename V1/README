@@ -11,6 +11,8 @@ The source code and some properties formalized using UPPAAL which were used for 
 The archive contains three directories:
 - the  Source/ directory contains the source code. 
 - The ExampleProperties/ directory contains some UPPAAL models (stored as .xml) defining some example properties we used for testing. 
+- The ExamplePerformanceEval/ directory contains some UPPAAL models (stored as .xml) defining example properties that were used for evaluation (varphi, and \psi_i). 
+
 - The UppaalLibraries/ directory contains UPPAAL libraries that were used taken from  (http://people.cs.aau.dk/~adavid/python/).
 Note that the prototype was developed and tested on Linux (Ububtu 14, 32-bit version). 
 
